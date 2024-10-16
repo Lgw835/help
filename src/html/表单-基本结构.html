@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单-基本结构</title>
+</head>
+<body>
+    <form action="https://www.baidu.com/s" target="_blank">
+        <input type="text" name="wd">
+        <button>百度搜索</button>
+    </form>
+
+    <br>
+    <hr>
+
+    <form action="https://search.jd.com/search" target="_blank">
+        <input type="text" name="keyword">
+        <button>京东搜索</button>
+    </form>
+    <br>
+    <form action="https://search.jd.com">
+<!--        文本输入框-->
+        账户：<input type="text" name="account" value="张三" maxlength="4">
+        <br>
+<!--        密码输入框-->
+        密码：<input type="password" name="pwd" maxlength="8" minlength="4">
+        <br>
+<!--        单选框-->
+        性别：<input type="radio" name="gender" value="male" checked>男
+              <input type="radio" name="gender"value="female" >女
+        <br>
+<!--        多选框-->
+        爱好：<input type="checkbox" name="hobby" value="smoke">抽烟
+              <input type="checkbox" name="hobby" value="drink">喝酒
+<!--        隐藏域-->
+        <input type="hidden" name="tag" value="123">
+
+
+        <br>
+        <hr>
+<!--        确认按钮_01-->
+        <button>确认</button>
+        <button type="submit">确认</button>
+<!--        确认按钮_02-->
+        <input type="submit" value="确认">
+        <input type="submit"><br>
+<!--        重置按钮_01-->
+        <button type="reset">重置</button>
+<!--        重置按钮_02-->
+        <input type="reset">
+        <input type="reset" value="点我重置">
+
+
+
+
+
+
+    </form>
+
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h2>平方计算器</h2>
+<input type="text" id="i1">
+<input type="button" value="确认" onclick="f()">
+<div>
+    <span>平方后的结果是：</span>
+    <em></em>
+</div>
+<script>
+    function f() {
+        let i=document.querySelector("#i1")
+        let d=document.querySelector("em")
+        //判断用户输入的内容是否是NaN
+        if (isNaN(i.value)){
+            d.innerText="输入错误!";
+            return;
+        }
+        let ii=Number(i.value)
+        ii*=ii;
+        d.innerText=ii;
+    }
+</script>
+</body>
+</html>

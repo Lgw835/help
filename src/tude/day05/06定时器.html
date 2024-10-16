@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // setInterval(f,3000)
+    // function f(){
+    //     // alert("时间到！")
+    //     console.log("aaa")
+    // }
+    //
+    // // 第二种
+    // setInterval(function (){
+    //     console.log("bbb")
+    // },2000)
+
+    let count=0
+    let timer=setInterval(function () {
+        console.log("可以结束的")
+        count++
+        if (count>3){
+            clearInterval(timer)
+        }
+    },2000)
+
+</script>
+</body>
+</html>

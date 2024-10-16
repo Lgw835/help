@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+<title>相对路径—-绝对路径</title>
+</head>
+<body>
+<!--        相对路径            -->
+<!--            上一级：../     -->
+<!--            同级：./        -->
+<!--            下一级：./a/    -->
+
+    <div>
+        <!--    同一文件夹内的图片‘./’-->
+        <img width="500" src="186.jpg" alt="联想桌面">
+        <!--    在同一文件夹内一个文件夹的图片‘./a/’-->
+        <img width="500" src="./a/8585671.jpg" alt="联想桌面2">
+        <!--    在上一级文件夹‘../’-->
+        <img width="500" src="../111222.png" alt="联想桌面">
+    </div>
+
+<!--    绝对路径，分两类：本地绝对路径、网络绝对路径-->
+<!--    本地绝对路径-->
+    <div>
+<!--    看不到正常，在文件夹里面打开就可以了-->
+        <img src="D:/win2024/123.jpg" alt="">
+    </div>
+<!--    网络绝对路径-->
+    <div>
+        <img width="500" src="https://n.sinaimg.cn/news/338/w1240h698/20240926/48fe-e51febbef474fe88f4769bdbbe7d7ab6.jpg" alt="网图">
+    </div>
+</body>
+</html>

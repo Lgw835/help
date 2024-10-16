@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h1{
+            color: violet;
+        }
+
+        /*外部样式、内部样式优先级相同*/
+        /*后来者居上*/
+        h2{
+            color: yellow;
+        }
+    </style>
+    <link rel="stylesheet" href="../01day01/position.css">
+</head>
+<body>
+<!--    行内样式和外部样式、内部样式冲突,听行内样式-->
+    <h1 style="color: red;font-size: 40px">欢迎光临</h1>
+    <h2>哈哈哈哈哈哈哈哈哈</h2>
+</body>
+</html>

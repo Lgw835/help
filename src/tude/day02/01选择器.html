@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01选择器</title>
+    <style>
+        /*子孙后代选择器*/
+        /* body div p{
+              color: red;
+          }*/
+        /*子元素选择器, 不包含后代*/
+        body>div>div>p{
+            color: red;
+        }
+        /*伪类选择器*/
+        /*未访问状态*/
+        a:link{color: red}
+        /*访问过状态*/
+        a:visited{color: green}
+        /*悬停*/
+        a:hover{color: blue}
+        /*点击*/
+        a:active{color: yellow}
+    </style>
+</head>
+<body>
+<a href="../day01/01文本相关.html">超链接1</a>
+<a href="http://www.youku.com">超链接2</a>
+<a href="http://www.qq.com">超链接3</a>
+<p>p1</p>
+<div>
+    <p>p2</p>
+    <div><p>p3</p></div>
+    <div>
+        <p>p4</p>
+        <div><p>p5</p></div>
+    </div>
+</div>
+</body>
+</html>

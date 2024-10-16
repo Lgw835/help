@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="#twm">跳至文末尾</a>
+<!--行内元素-->
+  <input type="text">
+<!--块级元素-->
+  <marquee>111</marquee>
+  <div>123456</div>
+    <div>
+<!--        特殊规则:h1-h6不能相互嵌套-->
+        <h1>会毁坏</h1>
+        <h2>hjxka<h3>jjj</h3>mmm</h2>
+    </div>
+<!--行内元素中不能嵌套块级元素-->
+  <span>
+      <h5>1</h5>
+      <p>2</p>
+  </span>
+<!--特殊规则:p内不能再写块级元素,否则会跳出来-->
+    <p>
+        <h6>标题六</h6>
+    </p>
+<a name="twm"></a>
+</body>
+</html>

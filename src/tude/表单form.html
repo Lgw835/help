@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>form</title>
+    <link rel="stylesheet" href="my.css">
+</head>
+<body>
+<!--action设置提交地址-->
+<form action="https://www.baidu.com/s" target="_blank">
+    <!--所有控件必须有name属性 否则不提交该参数
+    placeholder占位文本
+    maxlength设置最大字符长度
+    value 设置默认值
+    readonly只读-->
+    用户名:<input type="text" name="wd"
+                  maxlength="5"
+                  value="tom"
+                  readonly
+                  placeholder="请输入用户名"><br>
+    <!--文本框的属性和密码框是通用的 -->
+    密码:<input type="password" name="password"><br>
+    <!--checked设置默认选中 单选框value必须添加否则提交on-->
+<!--    性别:<input type="radio" name="gender" value="m" id="r1">-->
+<!--    <label for="r1">男</label>-->
+<!--    <input type="radio" checked name="gender" value="w">女<br>-->
+    性别：<input type="radio" name="gender" value="male" >男
+    <input type="radio" name="gender"value="female" >女
+    <br>
+    <!--单选和多选属性作用一样  checked也是默认选中-->
+    兴趣爱好:<input type="checkbox" name="hobby" value="cy" >抽烟
+    <input type="checkbox" name="hobby"  value="hj">喝酒
+    <input type="checkbox" name="hobby" value="tt">烫头<br>
+
+    生日:<input type="date" name="birthday"><br>
+    靓照:<input type="file" name="pic"><br>
+
+    所在地:   <!--selected设置默认选中-->
+    <select name="city" >
+        <option value="bj">北京</option>
+        <option value="sh" selected>上海</option>
+        <option value="gz">广州</option>
+    </select><br>
+    <input type="submit" value="注册">
+    <input type="reset"><!--重置按钮-->
+    <input type="button" value="按钮"><!--自定义按钮-->
+    <button type="submit">注册</button>
+    <button type="reset">重置</button>
+    <button type="button">按钮</button>
+</form>
+</body>
+</html>

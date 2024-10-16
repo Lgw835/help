@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    #d1,#d2{
+      width: 100px;
+      height: 100px;
+      border:1px solid red;
+    }
+    #d1{
+      /*添加外边距的方向如果有兄弟元素则是距离兄弟元素的距离
+      没有兄弟元素就是距上级元素的距离*/
+      /*margin-top: 50px;*/
+      /*4个方向赋值*/
+      /*margin: 30px;*/
+      /*上下和左右赋值*/
+      /*margin: 100px 50px;*/
+      /*上右下左 顺时针*/
+      /*margin: 10px 20px 30px 40px;*/
+      margin-bottom: 50px;
+    }
+    #d2{
+      /*上下相邻两个元素彼此添加外边距取最大值*/
+      margin-top: 50px;
+    }
+    #s1{
+      /*行内元素上下外边距 无效*/
+      /*margin-top: 50px;*/
+      margin-right: 50px;
+    }
+    #s2{
+      /*左右相邻彼此添加外边距 求和*/
+      margin-left: 50px;
+    }
+    #big{
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      overflow: hidden;
+    }
+    #big>div{
+      width: 50px;
+      height: 50px;
+      background-color: yellow;
+      margin-left: 50px;
+      /*当元素的上边缘和上级元素的上边缘重叠时
+      给元素添加上外边距会出现粘连问题,给上级元素添加
+      overflow:hidden 解决此问题*/
+      margin-top: 50px;
+    }
+    body{
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+<div id="big">
+  <div></div>
+</div>
+<span id="s1">span1</span><span id="s2">span2</span>
+<div id="d1">div1</div>
+<div id="d2">div2</div>
+<h1>这是h1</h1>
+<p>这是p标签</p>
+<ul>
+  <li>111</li>
+  <li>222</li>
+  <li>333</li>
+</ul>
+</body>
+</html>
