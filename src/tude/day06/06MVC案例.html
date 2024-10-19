@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table border="1">
+    <caption>个人信息页面</caption>
+    <tr>
+        <td>名字:</td><td id="name_td">xxx</td>
+    </tr>
+    <tr>
+        <td>照片:</td><td>
+        <img src="../2.jpg" style="width: 50px"  alt=""></td>
+    </tr>
+    <tr>
+        <td>年龄:</td><td id="age_td">xx岁</td>
+    </tr>
+    <tr>
+        <td>好友:</td>
+        <td>
+            <ul><li>xx</li><li>xx</li><li>xx</li></ul>
+        </td>
+    </tr>
+    <tr>
+        <td>工作:</td><td>xxx</td>
+    </tr>
+</table>
+<input type="button" value="请求数据">
+<!--引入jq框架-->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    //给按钮添加点击事件
+    $("input").click(function () {
+        //准备模拟的数据   自定义对象
+        // let person = {};   //创建空对象
+        // person.name="刘德华";
+        // person.age=18;
+        let person = {
+            name:"刘德华",
+            age:18,
+            url:"3.jpg",
+            job:"程序员",
+            friend:["郭富城","张学友","尼古拉斯赵四"]
+        }
+        //person对象是模拟得到的数据,把person里面的数据显示到页面中
+        $("#name_td").text(person.name);
+        //改图片的src属性值  attr=attribute属性
+        $("img").attr("src",person.url);
+        $("#age_td").text(person.age+"岁");
+        //得到所有li并删除
+        $("li").remove();
+        //遍历好友数组
+        for (let i = 0; i < person.friend.length; i++) {
+            let name = person.friend[i];
+            //创建li
+            let li = $("<li></li>");
+            li.text(name);
+            //把li添加到ul里面
+            $("ul").append(li);
+        }
+        //显示工作
+        $("td:last").text(person.job);
+    })
+</script>
+</body>
+</html>

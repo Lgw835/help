@@ -5,6 +5,46 @@
     <title>Title</title>
 </head>
 <body>
+<input type="button" value="显示">
+<input type="button" value="隐藏">
+<input type="button" value="淡出">
+<input type="button" value="淡入">
+<input type="button" value="上滑">
+<input type="button" value="下滑">
+<input type="button" value="自定义">
+<hr>
+<img src="../2.jpg" style="width: 200px" alt="">
+
+<!--引入jq框架-->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    // show里面添加了数字，相当于添加了动画时间
+    $("input:eq(0)").click(function () {
+        $("img").show(2000);
+    });
+    $("input:eq(1)").click(function () {
+        $("img").hide(2000);
+    });
+    // fadeOut淡出
+    $("input:eq(2)").click(function () {
+        $("img").fadeOut(2000);
+    });
+    $("input:eq(3)").click(function () {
+        $("img").fadeIn(2000);
+    });
+    $("input:eq(4)").click(function () {
+        $("img").slideUp(2000);
+    });
+    $("input:eq(5)").click(function () {
+        $("img").slideDown(2000);
+    });
+    $("input:eq(6)").click(function () {
+        $("img").css("position","relative");
+        $("img").animate({"left":"200px"},500).
+        animate({"top":"200px"},500).animate({"left":"0"},500).animate({"top":"0"},500)
+    });
+
+</script>
 
 </body>
 </html>
