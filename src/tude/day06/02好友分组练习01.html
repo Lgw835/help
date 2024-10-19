@@ -3,13 +3,6 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <style>
-        /*body>ul>li:hover{*/
-        /*    color: yellow;*/
-        /*}*/
-
-    </style>
-
 </head>
 <body>
 <ul>
@@ -35,18 +28,18 @@
         </ul>
     </li>
 </ul>
-
 <!--引入jq框架-->
 <script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
 <script>
-    // 得到第二层的ul 并隐藏
+    //得到第二层的ul 并隐藏
     $("li>ul").hide();
-    // 动态绑定事件
-    $("body>ul>li").click(function (){
-        // 元素显示
-        // $(this).children().show();
 
-        // 显示隐藏切换
+    //动态绑定事件
+    // 1.onclick是绑定事件,告诉浏览器在鼠标点击时候要做什么
+    // 2.click本身是方法,作用是触发onclick事件,只要执行了元素的click()方法,就会触发onclick事件
+    $("body>ul>li").click(function () {
+        //$(this)代表事件源(触发事件的元素)
+        //children()得到子元素
         $(this).children().toggle();
     })
 

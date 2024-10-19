@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="姓名">
+<input type="text" placeholder="工作">
+<input type="text" placeholder="工资">
+<input type="button" value="添加">
+<table border="1">
+    <caption>员工列表</caption>
+    <tr>
+        <th>姓名</th><th>工作</th><th>工资</th>
+    </tr>
+</table>
+<!--引入jq框架-->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    $("input:last").click(function (){
+        let tr=$("<tr></tr>");
+        let nameTd=$("<td></td>");
+        let jobTd=$("<td></td>");
+        let salaryTd=$("<td></td>");
+
+        nameTd.text($("input:eq(0)").val());
+        jobTd.text($("input:eq(1)").val());
+        salaryTd.text($("input:eq(2)").val());
+
+        tr.append(nameTd,jobTd,salaryTd);
+        $("table").append(tr);
+    })
+</script>
+</body>
+</html>
