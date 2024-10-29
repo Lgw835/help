@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            background-color: black;
+            margin: 0;/*去掉自带外边距*/
+        }
+    </style>
+</head>
+<body>
+<!--引入jq框架-->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    //开启定时器添加雪花图片
+    setInterval(function () {
+        let img = $("<img src='snow.png'>");
+        //得到20-40的随机大小  0-20  + 20
+        let size = parseInt(Math.random()*21)+20;
+        img.css("width",size+"px");
+        img.css("position","absolute");//设置绝对定位
+        //得到窗口的宽高
+        let w = $(window).width();
+        let h = $(window).height();
+        //给雪花设置一个随机left值
+        let left = parseInt(Math.random()*(w-size));
+        img.css("left",left+"px");
+        $("body").append(img);
+        //让雪花做动画移动到屏幕底部   size(20-40)*100   2000-4000
+        img.animate({"top":h-size+"px"},size*100)
+            .fadeOut(1000,function () {
+                //在上面动画运行结束后，删除雪花图片
+                img.remove();
+            });
+    },10);
+</script>
+</body>
+</html>

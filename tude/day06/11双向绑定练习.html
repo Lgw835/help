@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+
+<!--  - {{变量}}:  插值, 把变量的值直接显示到当前位置-->
+<!--  - v-text="变量" :  让 元素的文本内容和变量进行绑定-->
+<!--  - v-html="变量":  让元素的html内容和变量进行绑定-->
+<!--  - v-bind:属性名="变量" :  让元素的某个属性和变量进行绑定   , 也可以直接在属性名前面添加:  这是属性绑定的简写-->
+<!--  - v-model="变量"  :  让元素的value值和变量进行双向绑定, 变量会影响页面显示,页面改动也会影响变量-->
+
+  <!--  v-model是双向绑定-->
+    <input type="text" v-model="urla" placeholder="请输入网址">
+  <a :href="urla">访问</a>
+</div>
+<!--引入vue-->
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.js"></script>
+<script>
+    let v=new Vue({
+      el:"div",
+      // 数据里面是变量名可以任意命名
+      data:{
+        urla:""
+      }
+    })
+</script>
+
+</body>
+</html>

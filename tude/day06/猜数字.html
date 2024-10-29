@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" placeholder="请输入1-100之间的整数">
+<input type="button" value="猜一猜" onclick="f()">
+<div></div>
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    let x=parseInt(Math.random()*100)+1;
+    console.log(x)
+    let count =0;
+    function f() {
+        count++;
+        if (isNaN(x)){
+            $("div").text("输入有误！")
+        }
+
+        if ($("input:first").val()>x){
+            $("div").text("猜大了！")
+        }else if ($("input:first").val()<x){
+            $("div").text("猜小了！")
+        }else{
+            $("div").text("恭喜你，第"+count+"次猜对了")
+        }
+    }
+</script>
+</body>
+</html>

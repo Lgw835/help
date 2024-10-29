@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text">
+<input type="text">
+<input type="button" value="加" onclick="f(1)">
+<input type="button" value="减" onclick="f(2)">
+<input type="button" value="乘" onclick="f(3)">
+<input type="button" value="除" onclick="f(4)">
+<div>结果:<b></b></div>
+
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+
+<script>
+    function f(x) {
+        let num1=$("input:eq(0)").val()*1
+        let num2=$("input:eq(1)").val()*1
+        console.log(num1,num2)
+        if (isNaN(num1)||isNaN(num2)){
+            $("b").text("您的输入有误！")
+            return
+        }
+
+        switch (x) {
+            case 1:
+                $("b").text(num1+num2)
+                return
+            case 2:
+                $("b").text(num1-num2)
+                return
+            case 3:
+                $("b").text(num1*num2)
+                return
+            case 4:
+                $("b").text(num1/num2)
+                return
+        }
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1 v-show="isVisible">
+        看不见我！
+    </h1>
+
+</div>
+<!--引入vue-->
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.js"></script>
+<script>
+    let v = new Vue({
+        el:"div",
+        data:{
+            isVisible:true
+        }
+    })
+</script>
+
+</body>
+</html>

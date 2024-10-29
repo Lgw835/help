@@ -1,0 +1,26 @@
+<!-- 这是一个使用 Vue.js 实现双向绑定的示例 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <input type="text" :value="info" placeholder="1号">
+    <input type="text" v-model="msg" placeholder="2号">
+    <p>{{info}}</p> <p>{{msg}}</p>
+</div>
+<!--引入vue-->
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.js"></script>
+<script>
+    let v = new Vue({
+        el:"div",
+        data:{
+            info:"单向绑定",
+            msg:"双向绑定"
+        }
+    })
+</script>
+</body>
+</html>

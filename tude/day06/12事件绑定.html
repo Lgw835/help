@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+  <input type="button" value="按钮" v-on:click="f()">
+<!--    事件绑定的简写-->
+    <input type="button" value="按钮" @click="f()">
+</div>
+
+<!--引入vue-->
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.js"></script>
+<script>
+  let v=new Vue({
+    el:"div",
+    data:{
+
+    },
+
+    methods:{
+      f:function () {
+        alert("lll")
+      }
+    }
+  })
+</script>
+</body>
+</html>

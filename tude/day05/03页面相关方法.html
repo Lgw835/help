@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>该吃饭了</div>
+<input type="text" id="i1">
+<input type="button" value="确认" onclick="f()">
+<script>
+    function f() {
+        let i=document.querySelector("#i1");
+        let d=document.querySelector("div");
+        d.innerText=i.value;
+    }
+</script>
+</body>
+</html>

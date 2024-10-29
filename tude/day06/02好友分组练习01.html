@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    <li>亲戚
+        <ul>
+            <li>习大大</li>
+            <li>老干妈</li>
+            <li>马大姐</li>
+        </ul>
+    </li>
+    <li>同事
+        <ul>
+            <li>马云</li>
+            <li>马化腾</li>
+            <li>马保国</li>
+        </ul>
+    </li>
+    <li>朋友
+        <ul>
+            <li>貂蝉</li>
+            <li>西施</li>
+            <li>孙尚香</li>
+        </ul>
+    </li>
+</ul>
+<!--引入jq框架-->
+<script src="https://cdn.staticfile.org/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    //得到第二层的ul 并隐藏
+    $("li>ul").hide();
+
+    //动态绑定事件
+    // 1.onclick是绑定事件,告诉浏览器在鼠标点击时候要做什么
+    // 2.click本身是方法,作用是触发onclick事件,只要执行了元素的click()方法,就会触发onclick事件
+    $("body>ul>li").click(function () {
+        //$(this)代表事件源(触发事件的元素)
+        //children()得到子元素
+        $(this).children().toggle();
+    })
+
+</script>
+</body>
+</html>

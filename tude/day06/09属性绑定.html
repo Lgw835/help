@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <!--v-bind让元素的xxx属性和变量进行绑定-->
+    <input type="text" v-bind:value="info">
+    <!--简写的属性绑定-->
+    <input type="text" :value="info">
+    <a :href="url">超链接</a>
+    <img src="" alt="">
+</div>
+<!--引入vue-->
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.js"></script>
+<script>
+    let v = new Vue({
+        el: "div",
+        data: {
+            info: "属性绑定",
+            url: "http://www.baidu.com"
+        }
+    })
+</script>
+</body>
+</html>

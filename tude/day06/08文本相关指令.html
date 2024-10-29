@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <!--插值 在此位置显示变量的值,不依赖标签-->
+    {{info}}
+    <!--v-text让元素的文本内容和变量进行绑定,必须写在标签里面-->
+    <p v-text="info"></p>
+    <!--v-html让元素的html内容和变量进行绑定-->
+    <p v-html="info"></p>
+</div>
+<!--引入vue-->
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.js"></script>
+<script>
+    let v=new Vue({
+        el:"div",
+        data:{
+            info:"<b>文本测试</b>"
+        }
+    })
+</script>
+</body>
+</html>

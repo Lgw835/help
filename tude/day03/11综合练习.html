@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    body{
+      font: 12px "simhei", Arial, Helvetica, sans-serif;
+      color: #666;
+    }
+    body>div{
+      width: 366px;
+      height: 233px;
+      background-color: #e8e8e8;
+    }
+    #top_div{
+      height: 35px;
+      background-color: #0aa1ed;
+      border-radius: 2px;
+    }
+    #top_div>img{
+      margin: 10px 0 0 10px;
+    }
+    #top_div>span{
+      font-size: 16px;
+      color: white;
+      /*如果需要对某个元素进行位置微调 通过相对定位*/
+      position: relative;
+      bottom: 5px;
+    }
+    .cat_div{
+      padding-left: 10px; /*左边间距10个像素*/
+    }
+    .cat_div>p{
+      color: #62b5ec;
+      margin: 20px 0 8px 0;
+    }
+    ul{
+      /*去掉图标*/
+      list-style-type: none;
+      margin: 0;
+      padding: 0;  /*去掉自带的内外边距*/
+      overflow: hidden;/*解决高度为0的问题*/
+    }
+    li{
+      float: left;/*所有li全部浮动则自动识别高度为0 */
+      margin-right: 10px;
+    }
+    a{
+      color: #0aa1ed;
+      text-decoration: none;
+    }
+    a:hover{
+      color: #0a7eb8;
+    }
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+<div>
+  <div id="top_div">
+    <img src="http://doc.canglaoshi.org/tstore_v1/images/itemCat/computer_icon1.png" alt="">
+    <span>电脑,办公/1F</span>
+  </div>
+  <div class="cat_div">
+    <p>电脑整机</p>
+    <ul>
+      <li><a href="">笔记本</a></li>
+      <li><a href="">游戏机</a></li>
+      <li><a href="">台式机</a></li>
+      <li><a href="">一体机</a></li>
+      <li><a href="">服务器</a></li>
+      <li><a href="">联想</a></li>
+    </ul>
+  </div>
+  <div class="cat_div">
+    <p>电脑整机</p>
+    <ul>
+      <li><a href="">笔记本</a></li>
+      <li><a href="">游戏机</a></li>
+      <li><a href="">台式机</a></li>
+      <li><a href="">一体机</a></li>
+      <li><a href="">服务器</a></li>
+      <li><a href="">联想</a></li>
+    </ul>
+  </div>
+  <div class="cat_div">
+    <p>电脑整机</p>
+    <ul>
+      <li><a href="">笔记本</a></li>
+      <li><a href="">游戏机</a></li>
+      <li><a href="">台式机</a></li>
+      <li><a href="">一体机</a></li>
+      <li><a href="">服务器</a></li>
+      <li><a href="">联想</a></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1 v-text="info"></h1>
+</div>
+<!--引入vue-->
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.js"></script>
+<script>
+    //创建Vue对象
+    let v = new Vue({
+        el:"div",  //设置被Vue管理的元素选择器  el= element元素
+        data:{
+            info:"Hello Vue!"
+        }
+    })
+    setTimeout(function () {
+        //当Vue 中的变量发生改变, Vue会找到和此变量绑定过的元素 让元素跟着变
+        v.info = "修改了!";
+    },3000);
+</script>
+</body>
+</html>
