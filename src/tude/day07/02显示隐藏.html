@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <!--""代表跳转到当前页面 起到了刷新页面的作用-->
+    <a href="">超链接1</a>
+    <!--如果不写href属性就不是超链接-->
+    <a>超链接2</a>
+    <!--#代表跳转到当前页面的顶部-->
+    <a href="#">超链接3</a>
+    <!--javascript:void(0) 不做任何操作-->
+    <a href="javascript:void(0)">超链接4</a>
+    <hr>
+
+    <!--如果绑定的变量为false则元素隐藏-->
+    <h1 v-show="isVisible">看不见我!show</h1>
+    <!--如果绑定的变量为false则元素删除-->
+    <h1 v-if="isVisible">看不见我!if</h1>
+</div>
+<!--引入vue-->
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/vue/2.6.14/vue.js"></script>
+<script>
+    let v = new Vue({
+        el:"div",
+        data:{
+            isVisible:true
+        }
+    })
+</script>
+</body>
+</html>
