@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Hello World!</h1>
+<!--相对路径 相对于当前页面所处位置
+    http://localhost:8080/xxx/index.html
+    http://localhost:8080/xxx/hello
+
+-->
+<a href="hello">相对路径</a>
+<!-- 绝对路径中的第一个/ 代表工程根路径, 这种写法跟页面所处位置无关
+-->
+<a href="/hello">绝对路径1</a>
+<!--请求本站资源使用上面两种,如果请求的是站外资源使用下面这种-->
+<a href="http://localhost:8080/hello">绝对路径2</a>
+
+<h1>通过form表单发送请求</h1>
+<form action="/hello">
+    <input type="text" name="info">
+    <input type="submit" value="提交">
+</form>
+<h1>测试传参</h1>
+<form action="/reg">
+    <input type="text" name="username" placeholder="用户名">
+    <input type="password" name="password" placeholder="密码">
+    <input type="text" name="nick" placeholder="昵称">
+    <input type="text" name="age" placeholder="年龄">
+    <input type="submit" value="提交">
+</form>
+
+</body>
+</html>
