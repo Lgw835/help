@@ -18,6 +18,7 @@ public class Demo05 {
         try (Connection conn = DBUtils.getConn()){
             //创建执行SQL语句的对象
             Statement s = conn.createStatement();
+//            s.execute("create table user(id int primary key auto_increment,username varchar(20) unique,password varchar(20),nick varchar(20))");
             s.executeUpdate(
                     "insert into user values(null,'"+username+"','"+password+"','"+nick+"')");
         } catch (SQLException throwables) {
